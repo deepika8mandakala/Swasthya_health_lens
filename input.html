@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log Your Meal - Swasthya AI</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html" style="text-decoration: none; color: inherit; display: flex; align-items: center;">
+                    <div class="logo-icon">S</div>
+                    <span>Swasthya<span class="ai-text">AI</span></span>
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="index.html#features" class="nav-link">Features</a></li>
+                <li><a href="index.html#how-it-works" class="nav-link">How It Works</a></li>
+                <li><a href="input.html" class="nav-link cta-nav active">Try Now</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Input Form Section -->
+    <section class="input-section">
+        <div class="container">
+            <div class="input-header">
+                <h1>Log Your Meal</h1>
+                <p>Describe what you ate in simple language. Our AI will analyze the nutritional content and provide health insights.</p>
+            </div>
+            
+            <div class="input-form-container">
+                <form id="meal-form" class="meal-form">
+                    <!-- Meal Information -->
+                    <div class="form-section">
+                        <h2>Meal Information</h2>
+                        
+                        <div class="form-group">
+                            <label for="meal-type">Meal Type</label>
+                            <select id="meal-type" name="meal-type" required>
+                                <option value="">Select meal type</option>
+                                <option value="breakfast">Breakfast</option>
+                                <option value="lunch">Lunch</option>
+                                <option value="dinner">Dinner</option>
+                                <option value="snack">Snack</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="food-items">What did you eat?</label>
+                            <textarea id="food-items" name="food-items" placeholder="e.g., 2 rotis, dal, rice, chicken curry" required></textarea>
+                            <div class="suggestions">
+                                <span class="suggestion-tag">2 rotis, dal, rice</span>
+                                <span class="suggestion-tag">Chicken curry with rice</span>
+                                <span class="suggestion-tag">Vegetable salad</span>
+                                <span class="suggestion-tag">Fruit bowl</span>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="portion-size">Portion Size</label>
+                            <div class="radio-group">
+                                <input type="radio" id="small" name="portion-size" value="small">
+                                <label for="small">Small</label>
+                                
+                                <input type="radio" id="medium" name="portion-size" value="medium" checked>
+                                <label for="medium">Medium</label>
+                                
+                                <input type="radio" id="large" name="portion-size" value="large">
+                                <label for="large">Large</label>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="drink">Drink</label>
+                            <select id="drink" name="drink">
+                                <option value="none">None</option>
+                                <option value="water">Water</option>
+                                <option value="juice">Juice</option>
+                                <option value="soft-drink">Soft Drink</option>
+                                <option value="tea">Tea</option>
+                                <option value="coffee">Coffee</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <!-- Personal Information -->
+                    <div class="form-section">
+                        <h2>Personal Information</h2>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="age">Age</label>
+                                <input type="number" id="age" name="age" min="1" max="120" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="gender">Gender</label>
+                                <select id="gender" name="gender" required>
+                                    <option value="">Select gender</option>
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="height">Height (cm)</label>
+                                <input type="number" id="height" name="height" min="50" max="250" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="weight">Weight (kg)</label>
+                                <input type="number" id="weight" name="weight" min="5" max="300" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="activity-level">Activity Level</label>
+                            <select id="activity-level" name="activity-level" required>
+                                <option value="">Select activity level</option>
+                                <option value="sedentary">Sedentary (little or no exercise)</option>
+                                <option value="moderate">Moderate (exercise 1-3 times/week)</option>
+                                <option value="active">Active (exercise 4-5 times/week)</option>
+                                <option value="very-active">Very Active (intense exercise 6-7 times/week)</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <!-- Health Conditions -->
+                    <div class="form-section">
+                        <h2>Health Conditions (Optional)</h2>
+                        <p class="section-description">This helps us provide more personalized recommendations.</p>
+                        
+                        <div class="checkbox-group">
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="diabetes" name="conditions" value="diabetes">
+                                <label for="diabetes">Diabetes</label>
+                            </div>
+                            
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="high-bp" name="conditions" value="high-bp">
+                                <label for="high-bp">High Blood Pressure</label>
+                            </div>
+                            
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="heart-problems" name="conditions" value="heart-problems">
+                                <label for="heart-problems">Heart Problems</label>
+                            </div>
+                            
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="none" name="conditions" value="none" checked>
+                                <label for="none">None</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Daily Habits -->
+                    <div class="form-section">
+                        <h2>Daily Habits (Optional)</h2>
+                        <p class="section-description">This information helps refine our predictions.</p>
+                        
+                        <div class="form-group">
+                            <label for="sleep">Sleep (hours per day)</label>
+                            <input type="number" id="sleep" name="sleep" min="0" max="24" step="0.5" placeholder="e.g., 7.5">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="water-intake">Water Intake</label>
+                            <select id="water-intake" name="water-intake">
+                                <option value="">Select water intake</option>
+                                <option value="less-than-1l">Less than 1L</option>
+                                <option value="1-2l">1-2L</option>
+                                <option value="2-3l">2-3L</option>
+                                <option value="more-than-3l">More than 3L</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="caffeine">Caffeine Intake</label>
+                            <select id="caffeine" name="caffeine">
+                                <option value="">Select caffeine intake</option>
+                                <option value="none">None</option>
+                                <option value="low">Low (1 cup/day)</option>
+                                <option value="moderate">Moderate (2-3 cups/day)</option>
+                                <option value="high">High (4+ cups/day)</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="fruit-veg">Fruit & Vegetable Intake</label>
+                            <select id="fruit-veg" name="fruit-veg">
+                                <option value="">Select frequency</option>
+                                <option value="rarely">Rarely</option>
+                                <option value="sometimes">Sometimes</option>
+                                <option value="daily">Daily</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="submit" class="btn-primary large">Analyze My Meal</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo-icon">S</div>
+                    <span>Swasthya<span class="ai-text">AI</span></span>
+                    <p>Intelligent Food & Health Lens for preventive healthcare.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4>Product</h4>
+                        <a href="index.html#features">Features</a>
+                        <a href="index.html#how-it-works">How It Works</a>
+                        <a href="input.html">Try Now</a>
+                    </div>
+                    <div class="link-group">
+                        <h4>Company</h4>
+                        <a href="#">About Us</a>
+                        <a href="#">Blog</a>
+                        <a href="#">Contact</a>
+                    </div>
+                    <div class="link-group">
+                        <h4>Legal</h4>
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Swasthya AI. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/input-system.js"></script>
+</body>
+</html>
