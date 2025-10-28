@@ -1,0 +1,14 @@
+# Core Web Framework
+flask
+flask-cors
+
+# Data Handling and Numerics
+pandas
+numpy
+
+# Machine Learning
+scikit-learn
+joblib
+
+# Natural Language Processing (for future use)
+nltk
