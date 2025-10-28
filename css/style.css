@@ -1,8 +1,14 @@
-/* Reset and Base Styles */
+/* === Background Video Styling (Final Clean Version) === */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+html,
+body {
+    scroll-behavior: smooth;
 }
 
 :root {
@@ -23,6 +29,7 @@ body {
     color: var(--dark-text);
     line-height: 1.6;
     overflow-x: hidden;
+    overflow-y: auto;
 }
 
 .container {
@@ -35,7 +42,9 @@ body {
     display: none !important;
 }
 
+
 /* Preloader */
+
 #preloader {
     position: fixed;
     top: 0;
@@ -95,7 +104,9 @@ body {
     font-weight: 500;
 }
 
+
 /* Navigation */
+
 .navbar {
     position: fixed;
     top: 0;
@@ -141,6 +152,16 @@ body {
     color: var(--primary-blue);
 }
 
+.cta-section h3,
+.cta-section p {
+    font-weight: 600;
+    /* or 700 for extra bold */
+}
+
+.hidden {
+    display: none;
+}
+
 .nav-menu {
     display: flex;
     list-style: none;
@@ -154,7 +175,8 @@ body {
     transition: color 0.3s;
 }
 
-.nav-link:hover, .nav-link.active {
+.nav-link:hover,
+.nav-link.active {
     color: var(--primary-green);
 }
 
@@ -179,7 +201,9 @@ body {
     transition: 0.3s;
 }
 
+
 /* Hero Section */
+
 .hero {
     padding: 150px 0 100px;
     background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
@@ -250,7 +274,8 @@ body {
     gap: 15px;
 }
 
-.btn-primary, .btn-secondary {
+.btn-primary,
+.btn-secondary {
     padding: 12px 30px;
     border-radius: 50px;
     font-weight: 600;
@@ -285,7 +310,9 @@ body {
     font-size: 1.1rem;
 }
 
+
 /* Hero Visual */
+
 .hero-visual {
     position: relative;
     display: flex;
@@ -412,7 +439,9 @@ body {
     color: var(--light-text);
 }
 
+
 /* Features Section */
+
 .features {
     padding: 100px 0;
     background: var(--white);
@@ -476,7 +505,9 @@ body {
     color: var(--light-text);
 }
 
+
 /* How It Works Section */
+
 .how-it-works {
     padding: 100px 0;
     background: var(--light-bg);
@@ -579,7 +610,9 @@ body {
     color: var(--light-text);
 }
 
+
 /* Footer */
+
 .footer {
     background: var(--dark-text);
     color: white;
@@ -642,58 +675,51 @@ body {
     color: #9ca3af;
 }
 
+
 /* Responsive Design */
+
 @media (max-width: 968px) {
     .hero-container {
         grid-template-columns: 1fr;
         gap: 40px;
         text-align: center;
     }
-    
     .hero-title {
         font-size: 2.5rem;
     }
-    
     .hero-actions {
         justify-content: center;
     }
-    
     .floating-card {
         position: relative;
         margin: 10px;
     }
-    
-    .card-1, .card-2 {
+    .card-1,
+    .card-2 {
         position: relative;
         top: auto;
         right: auto;
         bottom: auto;
         left: auto;
     }
-    
     .steps-container {
         padding: 0 20px;
     }
-    
     .step {
         flex-direction: column;
         text-align: center;
     }
-    
     .step-visual {
         margin-right: 0;
         margin-bottom: 20px;
     }
-    
     .step-connector {
         display: none;
     }
-    
     .footer-content {
         grid-template-columns: 1fr;
         gap: 40px;
     }
-    
     .footer-links {
         grid-template-columns: 1fr;
         gap: 30px;
@@ -713,28 +739,26 @@ body {
         box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
         padding: 20px 0;
     }
-
     .nav-menu.active {
         left: 0;
     }
-
     .hamburger {
         display: flex;
     }
-
     .hamburger.active .bar:nth-child(2) {
         opacity: 0;
     }
-
     .hamburger.active .bar:nth-child(1) {
         transform: translateY(8px) rotate(45deg);
     }
-
     .hamburger.active .bar:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg);
     }
 }
+
+
 /* Input Form Styles */
+
 .input-section {
     padding: 120px 0 60px;
     background: var(--light-bg);
@@ -807,7 +831,9 @@ body {
     color: var(--dark-text);
 }
 
-.form-group input, .form-group select, .form-group textarea {
+.form-group input,
+.form-group select,
+.form-group textarea {
     width: 100%;
     padding: 12px 15px;
     border: 1px solid #d1d5db;
@@ -817,7 +843,9 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
-.form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
     outline: none;
     border-color: var(--primary-green);
     box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
@@ -828,19 +856,22 @@ body {
     resize: vertical;
 }
 
-.radio-group, .checkbox-group {
+.radio-group,
+.checkbox-group {
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
 }
 
-.radio-group label, .checkbox-item {
+.radio-group label,
+.checkbox-item {
     display: flex;
     align-items: center;
     cursor: pointer;
 }
 
-.radio-group input[type="radio"], .checkbox-item input[type="checkbox"] {
+.radio-group input[type="radio"],
+.checkbox-item input[type="checkbox"] {
     width: auto;
     margin-right: 8px;
 }
@@ -870,22 +901,26 @@ body {
     margin-top: 30px;
 }
 
+
 /* Responsive adjustments for form */
+
 @media (max-width: 768px) {
     .input-form-container {
         padding: 20px;
     }
-    
     .form-row {
         grid-template-columns: 1fr;
     }
-    
-    .radio-group, .checkbox-group {
+    .radio-group,
+    .checkbox-group {
         flex-direction: column;
         align-items: flex-start;
     }
 }
+
+
 /* Results Page Styles */
+
 .results-section {
     padding: 120px 0 60px;
     background: var(--light-bg);
@@ -965,7 +1000,7 @@ body {
     color: var(--dark-text);
 }
 
-.risk-analysis > p {
+.risk-analysis>p {
     color: var(--light-text);
     margin-bottom: 30px;
 }
@@ -979,7 +1014,8 @@ body {
     border-collapse: collapse;
 }
 
-.risk-table th, .risk-table td {
+.risk-table th,
+.risk-table td {
     padding: 15px;
     text-align: left;
     border-bottom: 1px solid var(--gray-light);
@@ -1062,24 +1098,156 @@ body {
     flex-wrap: wrap;
 }
 
+
 /* Responsive adjustments for results page */
+
 @media (max-width: 768px) {
     .risk-analysis {
         padding: 20px;
     }
-    
-    .risk-table th, .risk-table td {
+    .risk-table th,
+    .risk-table td {
         padding: 10px 5px;
         font-size: 0.9rem;
     }
-    
     .results-actions {
         flex-direction: column;
         align-items: center;
     }
-    
-    .results-actions .btn-primary, .results-actions .btn-secondary {
+    .results-actions .btn-primary,
+    .results-actions .btn-secondary {
         width: 100%;
         max-width: 300px;
     }
+}
+
+
+/* === Background Video Styling (Final Clean Version) === */
+
+.bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+    /* Keep it behind all elements */
+}
+
+.bg-video video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    filter: brightness(0.7);
+    opacity: 0.9;
+    z-index: -1;
+}
+
+
+/* --- Force video to show behind everything --- */
+
+#bg-video {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1 !important;
+    display: block !important;
+}
+
+#bg-video {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1 !important;
+}
+
+#bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    /* ✅ keeps video behind everything */
+    opacity: 0.7;
+    /* optional for better visibility of text */
+}
+
+body,
+section,
+.container,
+.input-section {
+    background: transparent !important;
+}
+
+
+/* --- Make sure body and sections are transparent --- */
+
+body,
+section,
+.container,
+.input-section {
+    background: transparent !important;
+}
+
+
+/* ===== Background Video Styling (FINAL CLEAN VERSION) ===== */
+
+#bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -2;
+    /* keeps video fully behind everything */
+}
+
+#bg-video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.8);
+}
+
+#bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(1) saturate(1) hue-rotate(5deg);
+    z-index: -1;
+    pointer-events: none;
+    /* allows clicks through the video */
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(210, 240, 210, 0.2);
+    /* soft natural green overlay */
+    z-index: 0;
+    pointer-events: none;
+    /* also lets buttons be clickable */
 }
