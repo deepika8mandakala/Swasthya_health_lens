@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 // Fill form fields
                 Object.keys(profileData).forEach(key => {
-                    const field = document.getElementById(profile-${key});
+                    const field = document.getElementById(`profile-${key}`);
                     if (field) {
                         if (field.type === 'checkbox') {
                             field.checked = profileData[key].includes(field.value);
@@ -135,7 +135,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // Update BMI category
             const bmiCategory = getBMICategory(bmi);
             const bmiElement = document.getElementById('bmi-value');
-            bmiElement.className = bmi-${bmiCategory.toLowerCase().replace(' ', '-')};
+            bmiElement.className = `bmi-${bmiCategory.toLowerCase().replace(' ', '-')}`;
         }
     }
     
@@ -249,7 +249,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function showNotification(message, type = 'info') {
         // Create notification element
         const notification = document.createElement('div');
-        notification.className = notification notification-${type};
+        notification.className = `notification notification-${type}`;
         notification.textContent = message;
         
         // Style the notification
