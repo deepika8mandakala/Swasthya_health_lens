@@ -221,7 +221,7 @@ body {
 }
 
 .hero-description {
-    font-size: 1.2rem;
+    font-size: 1.1.5rem;
     color: var(--light-text);
     margin-bottom: 30px;
     line-height: 1.6;
@@ -282,7 +282,7 @@ body {
 
 .btn-primary.large {
     padding: 15px 40px;
-    font-size: 1.1rem;
+    font-size: 1.1.5rem;
 }
 
 /* Hero Visual */
@@ -342,7 +342,7 @@ body {
 }
 
 .app-header h3 {
-    font-size: 1.2rem;
+    font-size: 1.1.5rem;
     margin-bottom: 5px;
 }
 
@@ -368,7 +368,7 @@ body {
 }
 
 .food-emoji {
-    font-size: 1.2rem;
+    font-size: 1.1.5rem;
 }
 
 .health-score {
@@ -463,7 +463,7 @@ body {
 }
 
 .feature-card .feature-icon {
-    font-size: 3rem;
+    font-size: 1.5rem;
     margin-bottom: 20px;
 }
 
@@ -569,12 +569,12 @@ body {
 }
 
 .cta-section h3 {
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin-bottom: 15px;
 }
 
 .cta-section p {
-    font-size: 1.2rem;
+    font-size: 1.1.5rem;
     margin-bottom: 30px;
     color: var(--light-text);
 }
@@ -620,7 +620,7 @@ body {
 
 .link-group h4 {
     margin-bottom: 20px;
-    font-size: 1.2rem;
+    font-size: 1.1.5rem;
 }
 
 .link-group a {
@@ -753,7 +753,7 @@ body {
 }
 
 .input-header p {
-    font-size: 1.1rem;
+    font-size: 1.1.5rem;
     color: var(--light-text);
     max-width: 600px;
     margin: 0 auto;
@@ -812,7 +812,7 @@ body {
     padding: 12px 15px;
     border: 1px solid #d1d5db;
     border-radius: 8px;
-    font-size: 1rem;
+    font-size: 1.5rem;
     transition: border-color 0.3s, box-shadow 0.3s;
     font-family: 'Poppins', sans-serif;
 }
@@ -898,14 +898,14 @@ body {
 }
 
 .profile-header h1 {
-    font-size: 3rem;
+    font-size: 1.5rem;
     font-weight: 700;
     color: var(--dark-text);
     margin-bottom: 20px;
 }
 
 .profile-header p {
-    font-size: 1.2rem;
+    font-size: 1.1.5rem;
     color: var(--light-text);
     max-width: 600px;
     margin: 0 auto;
@@ -994,7 +994,7 @@ body {
 }
 
 .stat-icon {
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin-bottom: 10px;
 }
 
@@ -1006,7 +1006,7 @@ body {
 }
 
 .stat-content p {
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 700;
     margin: 0;
     line-height: 1;
@@ -1091,7 +1091,7 @@ body {
     }
     
     .profile-header h1 {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 }
 
@@ -1114,7 +1114,7 @@ body {
 }
 
 .results-header p {
-    font-size: 1.1rem;
+    font-size: 1.1.5rem;
     color: var(--light-text);
     max-width: 600px;
     margin: 0 auto;
@@ -1141,18 +1141,18 @@ body {
 }
 
 .summary-icon {
-    font-size: 3rem;
+    font-size: 1.5rem;
     margin-bottom: 15px;
 }
 
 .summary-card h3 {
-    font-size: 1.2rem;
+    font-size: 1.1.5rem;
     margin-bottom: 10px;
     color: var(--dark-text);
 }
 
 .score-display {
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 700;
     color: var(--primary-green);
 }
@@ -1240,7 +1240,7 @@ body {
 }
 
 .recommendation-card h3 {
-    font-size: 1.3rem;
+    font-size: 1.1.5rem;
     margin-bottom: 15px;
     color: var(--dark-text);
 }
@@ -1270,7 +1270,7 @@ body {
 }
 
 .user-data-section h2 {
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin-bottom: 30px;
     color: var(--dark-text);
     text-align: center;
@@ -1296,7 +1296,7 @@ body {
 }
 
 .user-data-card h3 {
-    font-size: 1.3rem;
+    font-size: 1.1.5rem;
     margin-bottom: 20px;
     color: var(--dark-text);
     border-bottom: 2px solid var(--primary-green);

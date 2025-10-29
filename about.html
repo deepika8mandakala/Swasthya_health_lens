@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - Swasthya AI</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #ffffff;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* Navigation */
+    .navbar {
+      background: rgba(255, 255, 255, 0.98);
+      backdrop-filter: blur(10px);
+      padding: 1.5rem 0;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 1px solid rgba(52, 211, 153, 0.2);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #1a202c;
+      text-decoration: none;
+    }
+
+    .logo-icon {
+      width: 40px;
+      height: 40px;
+      background: linear-gradient(135deg, #34d399, #10b981);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      color: white;
+      box-shadow: 0 0 20px rgba(52, 211, 153, 0.4);
+    }
+
+    .ai-text {
+      background: linear-gradient(135deg, #34d399, #10b981);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .back-btn {
+      background: linear-gradient(135deg, #34d399, #10b981);
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      font-weight: 500;
+      box-shadow: 0 4px 15px rgba(52, 211, 153, 0.3);
+    }
+
+    .back-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(52, 211, 153, 0.4);
+    }
+
+    /* Hero Section */
+    .hero {
+      padding: 8rem 1.5rem 4rem;
+      text-align: center;
+      color: #1a202c;
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      animation: fadeInDown 1s ease;
+      background: linear-gradient(135deg, #1a202c, #34d399);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero p {
+      font-size: 1.25rem;
+      max-width: 800px;
+      margin: 0 auto 1.5rem;
+      opacity: 0.8;
+      animation: fadeInUp 1s ease 0.2s backwards;
+      color: #4a5568;
+    }
+
+    /* Team Section */
+    .team-section {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 4rem 1.5rem;
+    }
+    .team-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 4 equal columns in one line */
+  gap: 1.5rem;
+  justify-items: center;
+  align-items: start;
+  margin-top: 1.5rem;
+}
+
+
+    .team-card {
+      background: #ffffff;
+      border: 1px solid rgba(52, 211, 153, 0.2);
+      border-radius: 20px;
+      padding: 1.5rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      animation: fadeInUp 0.8s ease backwards;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    }
+
+    .team-card:hover {
+      transform: translateY(-15px) scale(1.02);
+      box-shadow: 0 20px 60px rgba(52, 211, 153, 0.25);
+      border-color: rgba(52, 211, 153, 0.6);
+    }
+
+    .image-container {
+      width: 150px;
+      height: 150px;
+      margin: 0 auto 1.5rem;
+    }
+
+    .image-wrapper {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid #10b981;
+  box-shadow: 0 0 20px rgba(16, 185, 129, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #34d399, #10b981); /* fallback if image fails */
+}
+
+.profile-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* ensures image fits neatly inside */
+  border-radius: 50%;
+  display: block;
+}
+
+    .team-card:hover .member-image {
+      transform: scale(1.1);
+    }
+
+    .image-placeholder {
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, #34d399, #10b981);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      color: white;
+      font-weight: 700;
+    }
+
+    .member-name {
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: #1a202c;
+      margin-bottom: 0.5rem;
+    }
+
+    .member-role {
+      font-size: 1.5rem;
+      color: #34d399;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+    }
+
+    .member-bio {
+      font-size: 1.5rem;
+      color: #4a5568;
+      line-height: 1.6;
+    }
+
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .social-link {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      background: rgba(52, 211, 153, 0.1);
+      border: 1px solid rgba(52, 211, 153, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      font-size: 1.1.5rem;
+      color: #34d399;
+      font-weight: 600;
+    }
+
+    .social-link:hover {
+      background: linear-gradient(135deg, #34d399, #10b981);
+      border-color: #34d399;
+      transform: translateY(-3px) scale(1.1);
+      box-shadow: 0 5px 15px rgba(52, 211, 153, 0.4);
+      color: white;
+    }
+
+    /* Footer */
+    .footer {
+      background: #f7fafc;
+      color: #1a202c;
+      padding: 1.5rem 1.5rem 1.5rem;
+      margin-top: 4rem;
+      border-top: 1px solid rgba(52, 211, 153, 0.2);
+    }
+
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .footer-brand-title {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+
+    .footer p {
+      opacity: 0.8;
+      margin-top: 1.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(52, 211, 153, 0.2);
+    }
+
+    /* Animations */
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2.5rem; }
+      .hero p { font-size: 1.5rem; }
+      .team-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <div class="logo-icon">S</div>
+        <span>Swasthya<span class="ai-text">AI</span></span>
+      </a>
+      <a href="index.html" class="back-btn">← Back to Home</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Meet Our Team</h1>
+    <p>Passionate innovators dedicated to revolutionizing preventive healthcare through AI-powered nutrition insights.</p>
+  </section>
+
+  <!-- Team Section -->
+  <section class="team-section">
+    <div class="team-grid">
+      <!-- Team Member 1 -->
+      <div class="team-card">
+        <div class="image-container">
+          <div class="image-wrapper">
+            <div class="image-placeholder"><img src="profile.jpg" alt="Deepika Mandakala" class="profile-img"></div>
+          </div>
+        </div>
+        <h3 class="member-name">Deepika Mandakala</h3>
+        <p class="member-role">Co-Founder & Lead Developer</p>
+        <p class="member-bio">Passionate about leveraging AI to create meaningful health solutions that empower users to make better dietary choices.</p>
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/deepika-mandakala-194880285" class="social-link" title="LinkedIn" target="_blank">in</a>
+          <a href="https://github.com/deepika8mandakala" class="social-link" title="GitHub" target="_blank">G</a>
+          <a href="mailto:mandakaladeepika@gmail.com" class="social-link" title="Email">@</a>
+        </div>
+      </div>
+
+      <!-- Team Member 2 -->
+      <div class="team-card">
+        <div class="image-container">
+          <div class="image-wrapper">
+            <div class="image-placeholder">KR</div>
+          </div>
+        </div>
+        <h3 class="member-name">Keerthi Reddy</h3>
+        <p class="member-role">Co-Founder & AI Specialist</p>
+        <p class="member-bio">Focused on building intelligent systems that understand nutrition and provide actionable health insights for everyday users.</p>
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/karri-keerthi-reddy-a9a80429a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="social-link" title="LinkedIn" target="_blank">in</a>
+          <a href="https://github.com/keerthir-web" class="social-link" title="GitHub" target="_blank">G</a>
+          <a href="mailto:keerthireddykarri.17@gmail.com" class="social-link" title="Email">@</a>
+        </div>
+      </div>
+
+      <!-- Team Member 3 -->
+      <div class="team-card">
+        <div class="image-container">
+          <div class="image-wrapper">
+            <div class="image-placeholder"><img src="profile1.jpg" alt="Kavya Reddy" class="profile-img"></div>
+          </div>
+        </div>
+        <h3 class="member-name">Kavya Reddy</h3>
+        <p class="member-role">Co-Founder & UX Designer</p>
+        <p class="member-bio">Dedicated to creating intuitive and beautiful interfaces that make health tracking effortless and enjoyable for everyone.</p>
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/kavya-reddy-chinnam-376a7a273" class="social-link" title="LinkedIn" target="_blank">in</a>
+          <a href="https://github.com/Kavyareddy1622" class="social-link" title="GitHub" target="_blank">G</a>
+          <a href="mailto:kavyareddy1603@gmail.com " class="social-link" title="Email">@</a>
+        </div>
+      </div>
+
+      <!-- Team Member 4 -->
+      <div class="team-card">
+        <div class="image-container">
+          <div class="image-wrapper">
+            <div class="image-placeholder"><img src="profile2.jpg" alt="K Dharani" class="profile-img"></div>
+          </div>
+        </div>
+        <h3 class="member-name">K Dharani</h3>
+        <p class="member-role">Co-Founder & Health Analyst</p>
+        <p class="member-bio">Bringing expertise in nutrition science to ensure our AI provides accurate, evidence-based health recommendations.</p>
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/dharani-k-3a51582a6" class="social-link" title="LinkedIn" target="_blank">in</a>
+          <a href="https://github.com/dharanik995" class="social-link" title="GitHub" target="_blank">G</a>
+          <a href="mailto:dharanik514@gmail.com" class="social-link" title="Email">@</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- College Banner Section -->
+<section class="college-banner">
+    <div class="college-content">
+      <img src="download.png" alt="Vignan's IIT Logo" class="college-logo">
+      <div class="college-text">
+        <h2>Developed by <span>Vignan’s IIT</span> Students</h2>
+        <p>Proudly representing innovation and excellence from Vignan’s Institute of Information Technology, Visakhapatnam.</p>
+      </div>
+    </div>
+  </section>
+  
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-brand-title">
+        <div class="logo-icon">S</div>
+        <span>Swasthya<span class="ai-text">AI</span></span>
+      </div>
+      <p>Intelligent Food & Health Lens for preventive healthcare.</p>
+      <p>&copy; 2025 Swasthya AI. All rights reserved. Made with ❤️ by our amazing team.</p>
+    </div>
+  </footer>
+</body>
+</html>

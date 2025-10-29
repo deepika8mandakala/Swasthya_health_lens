@@ -119,9 +119,9 @@ body {
 }
 
 .nav-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+    max-width: 2000px;
+    margin: center;
+    padding: 20 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -130,15 +130,15 @@ body {
 
 .nav-logo {
     display: flex;
-    align-items: center;
-    font-size: 24px;
+    align-items: left;
+    font-size: 30px;
     font-weight: 700;
     color: var(--dark-text);
 }
 
 .logo-icon {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     background: linear-gradient(135deg, var(--primary-green), var(--primary-blue));
     border-radius: 10px;
     display: flex;
@@ -146,6 +146,10 @@ body {
     justify-content: center;
     color: white;
     margin-right: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
 }
 
 .ai-text {
@@ -165,20 +169,22 @@ body {
 .nav-menu {
     display: flex;
     list-style: none;
-}
-
-.nav-link {
-    text-decoration: none;
-    color: var(--dark-text);
-    padding: 10px 15px;
+    gap: 1.5rem; /* adds spacing between items */
+  }
+  
+  .nav-link {
+    font-size: 1.5rem; /* increase font size (default ~16px → now ~19px) */
     font-weight: 500;
-    transition: color 0.3s;
-}
-
-.nav-link:hover,
-.nav-link.active {
-    color: var(--primary-green);
-}
+    color: #080101ed;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .nav-link:hover {
+    color: #34d399; /* bright green hover color */
+    transform: scale(1.1);
+  }
+  
 
 .cta-nav {
     background: var(--primary-green);
@@ -245,7 +251,7 @@ body {
 }
 
 .hero-description {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     color: var(--light-text);
     margin-bottom: 30px;
     line-height: 1.6;
@@ -307,7 +313,7 @@ body {
 
 .btn-primary.large {
     padding: 15px 40px;
-    font-size: 1.1rem;
+    font-size: 1.1.5rem;
 }
 
 
@@ -369,7 +375,7 @@ body {
 }
 
 .app-header h3 {
-    font-size: 1.2rem;
+    font-size: 1.1.5rem;
     margin-bottom: 5px;
 }
 
@@ -393,9 +399,58 @@ body {
     background: var(--gray-light);
     border-radius: 10px;
 }
+.college-banner {
+    background: linear-gradient(135deg, #ecfdf5, #d1fae5);
+    padding: 3rem 1.5rem;
+    margin: 1.5rem 0 0;
+    border-top: 2px solid rgba(52, 211, 153, 0.3);
+    box-shadow: 0 10px 30px rgba(52, 211, 153, 0.1);
+  }
+  
+  .college-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+  
+  .college-logo {
+    width: 100px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(52, 211, 153, 0.3);
+    background: white;
+    padding: 0.5rem;
+  }
+  .college-banner {
+    animation: fadeInUp 1s ease;
+  }
+  
+  
+  .college-text h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #065f46;
+  }
+  
+  .college-text h2 span {
+    color: #10b981;
+  }
+  
+  .college-text p {
+    font-size: 1.1rem;
+    color: #374151;
+    margin-top: 0.5rem;
+    max-width: 600px;
+  }
+  
 
 .food-emoji {
-    font-size: 1.2rem;
+    font-size: 1.1.5rem;
 }
 
 .health-score {
@@ -492,7 +547,7 @@ body {
 }
 
 .feature-card .feature-icon {
-    font-size: 3rem;
+    font-size: 1.5rem;
     margin-bottom: 20px;
 }
 
@@ -563,7 +618,7 @@ body {
 
 .step-content h3 {
     font-size: 1.5rem;
-    margin-bottom: 15px;
+    margin-bottom: 30px;
     color: var(--dark-text);
 }
 
@@ -600,12 +655,12 @@ body {
 }
 
 .cta-section h3 {
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin-bottom: 15px;
 }
 
 .cta-section p {
-    font-size: 1.2rem;
+    font-size: 1.1.5rem;
     margin-bottom: 30px;
     color: var(--light-text);
 }
@@ -653,7 +708,7 @@ body {
 
 .link-group h4 {
     margin-bottom: 20px;
-    font-size: 1.2rem;
+    font-size: 1.1.5rem;
 }
 
 .link-group a {
@@ -777,7 +832,7 @@ body {
 }
 
 .input-header p {
-    font-size: 1.1rem;
+    font-size: 1.1.5rem;
     color: var(--light-text);
     max-width: 600px;
     margin: 0 auto;
@@ -838,7 +893,7 @@ body {
     padding: 12px 15px;
     border: 1px solid #d1d5db;
     border-radius: 8px;
-    font-size: 1rem;
+    font-size: 1.5rem;
     transition: border-color 0.3s, box-shadow 0.3s;
     font-family: 'Poppins', sans-serif;
 }
@@ -939,7 +994,7 @@ body {
 }
 
 .results-header p {
-    font-size: 1.1rem;
+    font-size: 1.1.5rem;
     color: var(--light-text);
     max-width: 600px;
     margin: 0 auto;
@@ -966,18 +1021,18 @@ body {
 }
 
 .summary-icon {
-    font-size: 3rem;
+    font-size: 1.5rem;
     margin-bottom: 15px;
 }
 
 .summary-card h3 {
-    font-size: 1.2rem;
+    font-size: 1.1.5rem;
     margin-bottom: 10px;
     color: var(--dark-text);
 }
 
 .score-display {
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 700;
     color: var(--primary-green);
 }
@@ -1066,7 +1121,7 @@ body {
 }
 
 .recommendation-card h3 {
-    font-size: 1.3rem;
+    font-size: 1.1.5rem;
     margin-bottom: 15px;
     color: var(--dark-text);
 }
