@@ -1,4 +1,5 @@
 /* Keyframe Animations */
+
 @keyframes pulse {
     0% {
         transform: scale(0.8);
@@ -11,7 +12,8 @@
 }
 
 @keyframes float {
-    0%, 100% {
+    0%,
+    100% {
         transform: translateY(0);
     }
     50% {
@@ -53,7 +55,11 @@
 }
 
 @keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
         transform: translateY(0);
     }
     40% {
@@ -64,7 +70,9 @@
     }
 }
 
+
 /* Animation Classes */
+
 .fade-in {
     animation: fadeIn 1s ease-out;
 }
@@ -81,7 +89,9 @@
     animation: bounce 2s infinite;
 }
 
+
 /* Scroll Animation */
+
 .reveal {
     opacity: 0;
     transform: translateY(30px);
@@ -93,12 +103,16 @@
     transform: translateY(0);
 }
 
+
 /* Logo Animation on Load */
+
 .logo-circle {
     animation: bounce 1.5s ease-in-out;
 }
 
+
 /* Feature Cards Stagger Animation */
+
 .feature-card:nth-child(1) {
     animation-delay: 0.1s;
 }
@@ -115,7 +129,9 @@
     animation-delay: 0.4s;
 }
 
+
 /* Step Animation */
+
 .step {
     opacity: 0;
     transform: translateX(-50px);
@@ -133,4 +149,29 @@
 
 .step:nth-child(even).active {
     transform: translateX(0);
+}
+
+@keyframes glowing-border {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.btn-primary.large {
+    background: linear-gradient(90deg, #4CAF50, #2196F3, #4CAF50);
+    /* Customize colors */
+    background-size: 200% 200%;
+    animation: glowing-border 4s ease infinite;
+    transition: all 0.3s ease;
+}
+
+.btn-primary.large:hover {
+    box-shadow: 0 0 20px rgba(76, 175, 80, 0.7);
+    transform: translateY(-2px);
 }

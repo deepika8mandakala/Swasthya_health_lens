@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +9,14 @@
     <link rel="stylesheet" href="css/animations.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
+    <video autoplay muted loop id="bg-video">
+    <source src="assets/videos/t1.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+
+
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
@@ -39,14 +47,14 @@
                 <h1>Your Health Report</h1>
                 <p>Based on your meal and profile information, here's your personalized health analysis.</p>
             </div>
-            
+
             <div class="results-summary">
                 <div class="summary-card">
                     <div class="summary-icon">🍽</div>
                     <h3>Meal Analyzed</h3>
                     <p id="meal-summary">2 rotis, dal, rice, chicken curry</p>
                 </div>
-                
+
                 <div class="summary-card">
                     <div class="summary-icon">📊</div>
                     <h3>Health Score</h3>
@@ -54,18 +62,18 @@
                         <span id="health-score">82</span>/100
                     </div>
                 </div>
-                
+
                 <div class="summary-card">
                     <div class="summary-icon">⚡</div>
                     <h3>Key Insight</h3>
                     <p id="key-insight">Good balance of proteins and carbs. Consider adding more vegetables.</p>
                 </div>
             </div>
-            
+
             <div class="risk-analysis">
                 <h2>Health Risk Analysis</h2>
                 <p>Based on your current eating patterns and lifestyle, here are potential health risks to be aware of:</p>
-                
+
                 <div class="risk-table-container">
                     <table class="risk-table">
                         <thead>
@@ -111,7 +119,7 @@
                     </table>
                 </div>
             </div>
-            
+
             <div class="recommendations">
                 <h2>Personalized Recommendations</h2>
                 <div class="recommendations-grid">
@@ -124,7 +132,7 @@
                             <li>Replace refined grains with whole grains</li>
                         </ul>
                     </div>
-                    
+
                     <div class="recommendation-card">
                         <div class="rec-icon">💧</div>
                         <h3>Hydration</h3>
@@ -134,7 +142,7 @@
                             <li>Carry a water bottle with you</li>
                         </ul>
                     </div>
-                    
+
                     <div class="recommendation-card">
                         <div class="rec-icon">🚶</div>
                         <h3>Activity</h3>
@@ -146,7 +154,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="results-actions">
                 <a href="input.html" class="btn-primary large">Analyze Another Meal</a>
                 <button id="save-report" class="btn-secondary">Save Report</button>
@@ -192,4 +200,5 @@
 
     <script src="js/results.js"></script>
 </body>
+
 </html>
