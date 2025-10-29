@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,14 +8,7 @@
     <link rel="stylesheet" href="css/animations.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
-    <video autoplay muted loop id="bg-video">
-    <source src="assets/videos/t1.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-</video>
-
-
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
@@ -30,7 +22,8 @@
                 <li><a href="index.html" class="nav-link">Home</a></li>
                 <li><a href="index.html#features" class="nav-link">Features</a></li>
                 <li><a href="index.html#how-it-works" class="nav-link">How It Works</a></li>
-                <li><a href="input.html" class="nav-link cta-nav">Try Again</a></li>
+                <li><a href="input.html" class="nav-link">Analyze Meal</a></li>
+                <li><a href="profile.html" class="nav-link">Profile</a></li>
             </ul>
             <div class="hamburger">
                 <span class="bar"></span>
@@ -47,14 +40,88 @@
                 <h1>Your Health Report</h1>
                 <p>Based on your meal and profile information, here's your personalized health analysis.</p>
             </div>
-
+            
+            <!-- User Data Section -->
+            <div class="user-data-section">
+                <h2>Your Input Data</h2>
+                <div class="user-data-grid">
+                    <div class="user-data-card">
+                        <h3>Meal Information</h3>
+                        <div class="data-item">
+                            <span class="data-label">Meal Type:</span>
+                            <span id="user-meal-type" class="data-value">-</span>
+                        </div>
+                        <div class="data-item">
+                            <span class="data-label">Food Items:</span>
+                            <span id="user-food-items" class="data-value">-</span>
+                        </div>
+                        <div class="data-item">
+                            <span class="data-label">Portion Size:</span>
+                            <span id="user-portion-size" class="data-value">-</span>
+                        </div>
+                        <div class="data-item">
+                            <span class="data-label">Drink:</span>
+                            <span id="user-drink" class="data-value">-</span>
+                        </div>
+                    </div>
+                    
+                    <div class="user-data-card">
+                        <h3>Personal Information</h3>
+                        <div class="data-item">
+                            <span class="data-label">Age:</span>
+                            <span id="user-age" class="data-value">-</span>
+                        </div>
+                        <div class="data-item">
+                            <span class="data-label">Gender:</span>
+                            <span id="user-gender" class="data-value">-</span>
+                        </div>
+                        <div class="data-item">
+                            <span class="data-label">Height:</span>
+                            <span id="user-height" class="data-value">-</span>
+                        </div>
+                        <div class="data-item">
+                            <span class="data-label">Weight:</span>
+                            <span id="user-weight" class="data-value">-</span>
+                        </div>
+                        <div class="data-item">
+                            <span class="data-label">Activity Level:</span>
+                            <span id="user-activity-level" class="data-value">-</span>
+                        </div>
+                    </div>
+                    
+                    <div class="user-data-card">
+                        <h3>Health & Lifestyle</h3>
+                        <div class="data-item">
+                            <span class="data-label">Health Conditions:</span>
+                            <span id="user-conditions" class="data-value">-</span>
+                        </div>
+                        <div class="data-item">
+                            <span class="data-label">Sleep Hours:</span>
+                            <span id="user-sleep" class="data-value">-</span>
+                        </div>
+                        <div class="data-item">
+                            <span class="data-label">Water Intake:</span>
+                            <span id="user-water-intake" class="data-value">-</span>
+                        </div>
+                        <div class="data-item">
+                            <span class="data-label">Caffeine Intake:</span>
+                            <span id="user-caffeine" class="data-value">-</span>
+                        </div>
+                        <div class="data-item">
+                            <span class="data-label">Fruit & Veg Intake:</span>
+                            <span id="user-fruit-veg" class="data-value">-</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
             <div class="results-summary">
                 <div class="summary-card">
                     <div class="summary-icon">🍽</div>
                     <h3>Meal Analyzed</h3>
                     <p id="meal-summary">2 rotis, dal, rice, chicken curry</p>
                 </div>
-
+                
                 <div class="summary-card">
                     <div class="summary-icon">📊</div>
                     <h3>Health Score</h3>
@@ -62,18 +129,18 @@
                         <span id="health-score">82</span>/100
                     </div>
                 </div>
-
+                
                 <div class="summary-card">
                     <div class="summary-icon">⚡</div>
                     <h3>Key Insight</h3>
                     <p id="key-insight">Good balance of proteins and carbs. Consider adding more vegetables.</p>
                 </div>
             </div>
-
+            
             <div class="risk-analysis">
                 <h2>Health Risk Analysis</h2>
                 <p>Based on your current eating patterns and lifestyle, here are potential health risks to be aware of:</p>
-
+                
                 <div class="risk-table-container">
                     <table class="risk-table">
                         <thead>
@@ -119,7 +186,7 @@
                     </table>
                 </div>
             </div>
-
+            
             <div class="recommendations">
                 <h2>Personalized Recommendations</h2>
                 <div class="recommendations-grid">
@@ -132,7 +199,7 @@
                             <li>Replace refined grains with whole grains</li>
                         </ul>
                     </div>
-
+                    
                     <div class="recommendation-card">
                         <div class="rec-icon">💧</div>
                         <h3>Hydration</h3>
@@ -142,7 +209,7 @@
                             <li>Carry a water bottle with you</li>
                         </ul>
                     </div>
-
+                    
                     <div class="recommendation-card">
                         <div class="rec-icon">🚶</div>
                         <h3>Activity</h3>
@@ -154,7 +221,7 @@
                     </div>
                 </div>
             </div>
-
+            
             <div class="results-actions">
                 <a href="input.html" class="btn-primary large">Analyze Another Meal</a>
                 <button id="save-report" class="btn-secondary">Save Report</button>
@@ -200,5 +267,4 @@
 
     <script src="js/results.js"></script>
 </body>
-
 </html>
