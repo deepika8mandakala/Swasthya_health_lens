@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,12 +8,7 @@
     <link rel="stylesheet" href="css/animations.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
-    <video autoplay muted loop id="bg-video">
-    <source src="assets/videos/t1.mp4" type="video/mp4">
-    Your browser does not supports the video tag.
-  </video>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
@@ -28,7 +22,8 @@
                 <li><a href="index.html" class="nav-link">Home</a></li>
                 <li><a href="index.html#features" class="nav-link">Features</a></li>
                 <li><a href="index.html#how-it-works" class="nav-link">How It Works</a></li>
-                <li><a href="input.html" class="nav-link cta-nav active">Try Now</a></li>
+                <li><a href="input.html" class="nav-link active">Analyze Meal</a></li>
+                <li><a href="profile.html" class="nav-link">Profile</a></li>
             </ul>
             <div class="hamburger">
                 <span class="bar"></span>
@@ -45,13 +40,13 @@
                 <h1>Log Your Meal</h1>
                 <p>Describe what you ate in simple language. Our AI will analyze the nutritional content and provide health insights.</p>
             </div>
-
+            
             <div class="input-form-container">
                 <form id="meal-form" class="meal-form">
                     <!-- Meal Information -->
                     <div class="form-section">
                         <h2>Meal Information</h2>
-
+                        
                         <div class="form-group">
                             <label for="meal-type">Meal Type</label>
                             <select id="meal-type" name="meal-type" required>
@@ -62,7 +57,7 @@
                                 <option value="snack">Snack</option>
                             </select>
                         </div>
-
+                        
                         <div class="form-group">
                             <label for="food-items">What did you eat?</label>
                             <textarea id="food-items" name="food-items" placeholder="e.g., 2 rotis, dal, rice, chicken curry" required></textarea>
@@ -73,21 +68,21 @@
                                 <span class="suggestion-tag">Fruit bowl</span>
                             </div>
                         </div>
-
+                        
                         <div class="form-group">
                             <label for="portion-size">Portion Size</label>
                             <div class="radio-group">
                                 <input type="radio" id="small" name="portion-size" value="small">
                                 <label for="small">Small</label>
-
+                                
                                 <input type="radio" id="medium" name="portion-size" value="medium" checked>
                                 <label for="medium">Medium</label>
-
+                                
                                 <input type="radio" id="large" name="portion-size" value="large">
                                 <label for="large">Large</label>
                             </div>
                         </div>
-
+                        
                         <div class="form-group">
                             <label for="drink">Drink</label>
                             <select id="drink" name="drink">
@@ -100,17 +95,17 @@
                             </select>
                         </div>
                     </div>
-
+                    
                     <!-- Personal Information -->
                     <div class="form-section">
                         <h2>Personal Information</h2>
-
+                        
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="age">Age</label>
                                 <input type="number" id="age" name="age" min="1" max="120" required>
                             </div>
-
+                            
                             <div class="form-group">
                                 <label for="gender">Gender</label>
                                 <select id="gender" name="gender" required>
@@ -121,19 +116,19 @@
                                 </select>
                             </div>
                         </div>
-
+                        
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="height">Height (cm)</label>
                                 <input type="number" id="height" name="height" min="50" max="250" required>
                             </div>
-
+                            
                             <div class="form-group">
                                 <label for="weight">Weight (kg)</label>
                                 <input type="number" id="weight" name="weight" min="5" max="300" required>
                             </div>
                         </div>
-
+                        
                         <div class="form-group">
                             <label for="activity-level">Activity Level</label>
                             <select id="activity-level" name="activity-level" required>
@@ -145,45 +140,45 @@
                             </select>
                         </div>
                     </div>
-
+                    
                     <!-- Health Conditions -->
                     <div class="form-section">
                         <h2>Health Conditions (Optional)</h2>
                         <p class="section-description">This helps us provide more personalized recommendations.</p>
-
+                        
                         <div class="checkbox-group">
                             <div class="checkbox-item">
                                 <input type="checkbox" id="diabetes" name="conditions" value="diabetes">
                                 <label for="diabetes">Diabetes</label>
                             </div>
-
+                            
                             <div class="checkbox-item">
                                 <input type="checkbox" id="high-bp" name="conditions" value="high-bp">
                                 <label for="high-bp">High Blood Pressure</label>
                             </div>
-
+                            
                             <div class="checkbox-item">
                                 <input type="checkbox" id="heart-problems" name="conditions" value="heart-problems">
                                 <label for="heart-problems">Heart Problems</label>
                             </div>
-
+                            
                             <div class="checkbox-item">
                                 <input type="checkbox" id="none" name="conditions" value="none" checked>
                                 <label for="none">None</label>
                             </div>
                         </div>
                     </div>
-
+                    
                     <!-- Daily Habits -->
                     <div class="form-section">
                         <h2>Daily Habits (Optional)</h2>
                         <p class="section-description">This information helps refine our predictions.</p>
-
+                        
                         <div class="form-group">
                             <label for="sleep">Sleep (hours per day)</label>
                             <input type="number" id="sleep" name="sleep" min="0" max="24" step="0.5" placeholder="e.g., 7.5">
                         </div>
-
+                        
                         <div class="form-group">
                             <label for="water-intake">Water Intake</label>
                             <select id="water-intake" name="water-intake">
@@ -194,7 +189,7 @@
                                 <option value="more-than-3l">More than 3L</option>
                             </select>
                         </div>
-
+                        
                         <div class="form-group">
                             <label for="caffeine">Caffeine Intake</label>
                             <select id="caffeine" name="caffeine">
@@ -205,7 +200,7 @@
                                 <option value="high">High (4+ cups/day)</option>
                             </select>
                         </div>
-
+                        
                         <div class="form-group">
                             <label for="fruit-veg">Fruit & Vegetable Intake</label>
                             <select id="fruit-veg" name="fruit-veg">
@@ -216,7 +211,7 @@
                             </select>
                         </div>
                     </div>
-
+                    
                     <div class="form-actions">
                         <button type="submit" class="btn-primary large">Analyze My Meal</button>
                     </div>
@@ -263,5 +258,4 @@
 
     <script src="js/input-systems.js"></script>
 </body>
-
 </html>
