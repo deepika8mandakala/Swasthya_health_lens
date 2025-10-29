@@ -94,28 +94,18 @@
 }
 
 /* Logo Animation on Load */
-.logo-circle {
-    animation: bounce 1.5s ease-in-out;
-}
+/* The bounce is now handled via main.js to occur after preloader fades */
 
-/* Feature Cards Stagger Animation */
-.feature-card:nth-child(1) {
-    animation-delay: 0.1s;
-}
+/* Feature Cards Stagger Animation (already in main.js with intersection observer logic) */
+/*
+.feature-card:nth-child(1) { animation-delay: 0.1s; }
+.feature-card:nth-child(2) { animation-delay: 0.2s; }
+.feature-card:nth-child(3) { animation-delay: 0.3s; }
+.feature-card:nth-child(4) { animation-delay: 0.4s; }
+*/
 
-.feature-card:nth-child(2) {
-    animation-delay: 0.2s;
-}
-
-.feature-card:nth-child(3) {
-    animation-delay: 0.3s;
-}
-
-.feature-card:nth-child(4) {
-    animation-delay: 0.4s;
-}
-
-/* Step Animation */
+/* Step Animation (already in main.js with intersection observer logic) */
+/*
 .step {
     opacity: 0;
     transform: translateX(-50px);
@@ -134,3 +124,4 @@
 .step:nth-child(even).active {
     transform: translateX(0);
 }
+*/

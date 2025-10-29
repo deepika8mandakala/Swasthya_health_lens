@@ -2,7 +2,14 @@
 window.addEventListener('load', function() {
     const preloader = document.getElementById('preloader');
     const mainContent = document.getElementById('main-content');
-    
+
+    // If this page doesn't use a preloader layout (e.g., about.html),
+    // initialize animations immediately and exit early.
+    if (!preloader || !mainContent) {
+        initAnimations();
+        return;
+    }
+
     setTimeout(() => {
         preloader.style.opacity = '0';
         preloader.style.transition = 'opacity 0.5s ease';
@@ -87,6 +94,7 @@ function initAnimations() {
     // Navbar background on scroll
     window.addEventListener('scroll', function() {
         const navbar = document.querySelector('.navbar');
+        if (!navbar) return;
         if (window.scrollY > 50) {
             navbar.style.background = 'rgba(255, 255, 255, 0.98)';
             navbar.style.boxShadow = '0 4px 6px -1px rgba(0, 0, 0, 0.1)';
